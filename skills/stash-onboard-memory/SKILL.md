@@ -24,18 +24,23 @@ executing commands.
 1. Install: `bash -c "$(curl -fsSL https://joinstash.ai/install)"`
 2. Have the user authenticate interactively with `stash signin`. Never handle
    their credentials yourself.
-3. If they opted into session import during install, confirm the sessions
-   actually uploaded rather than assuming.
+3. If they opted into session import during install, it runs in the
+   background and the wizard finishes before it does. Follow it with
+   `stash import-history --status` (live progress bar) and wait for it to
+   finish before judging whether history landed.
 
 Then run the checks yourself and show the user pass or fail for each:
 
 - `stash --help` — the CLI resolves
 - `stash ls / --json` — readable scope
 - `stash status --json` — hook health
+- `stash import-history --status` — history import finished, error count
 - any trust or restart steps printed by `stash signin`, especially Codex hook
   approval
 
-Stop and repair a failed prerequisite before continuing.
+Stop and repair a failed prerequisite before continuing. The wizard is
+re-runnable: `stash setup` repeats setup (recording, agent hooks, folder
+context) without touching auth, so a wrong answer is never a dead end.
 
 ## 2. Interview for context
 
@@ -92,6 +97,11 @@ outranks what any source implies about them.
 
 ## 5. Run the curator
 
+This wiki is curated here, on the user's machine — so turn off the nightly
+cloud curator first: `stash memory --curator off`. One writer per wiki; the
+scheduled cloud run would write over this one mid-workday. (On-demand
+recomputes stay available, and `--curator on` restores the schedule.)
+
 Follow the `stash-curate-memory` skill for the first pass. Give it the path to
 the brief and a memory root to write into.
 
@@ -102,7 +112,20 @@ Before showing the result, check that the wiki answers the pain points from step
 2. If it does not, say which source was thin — that is a coverage gap, not a
 memory failure.
 
-Then upload the wiki with `stash upload`.
+Then publish the wiki into Stash Memory — page by page, not as a file upload:
+
+```bash
+# from the memory root; strips ./ and .md so paths become wiki paths
+find . -name '*.md' | while read -r f; do
+  p="${f#./}"; stash memory write "${p%.md}" < "$f"
+done
+stash memory ls   # verify the tree landed
+```
+
+`stash memory write` targets the reserved Memory wiki — the one
+`app.joinstash.ai/memory`, `stash memory`, and retrieving agents all read.
+(`stash upload` would land the wiki in Files instead, where the memory page
+never shows it.)
 
 ## 6. Prove immediate value
 
