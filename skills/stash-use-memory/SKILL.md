@@ -64,12 +64,19 @@ Search narrow and then widen
    files are small enough to read whole.
 2. **Open the page** the index points at. Read one related page if the first
    names it as governing or disambiguating.
-3. **Search the whole wiki** when the indexes miss — grep across
+3. **Follow the term through the wiki.** Grep its name and its frontmatter
+   aliases across `events/` and `procedures/` to find what happened to it and
+   how it gets handled. Pages carry no backlinks — grep is the backlink.
+4. **Search the whole wiki** when the indexes miss — grep across
    `terms/`, `events/`, and `procedures/` for the phrase, since a term may live
    inside a page as an alias or a mention rather than as its own entry.
-4. **Go to raw sources** for freshness, a conflict, an ambiguity, or a fact
+5. **Go to raw sources** for freshness, a conflict, an ambiguity, or a fact
    the wiki does not carry. Use `data.md` to find the right container and read
    that container — not every connected source.
+
+Search the user's own words first, then the canonical name. A page's
+`aliases` hold the phrasings actually observed, so grep hits the page even when
+the user calls it something the title never says.
 
 Double check raw sources if there is any doubt. Keep the mechanics out of the answer. Cite the page and, where it mattered, the raw source; do not narrate the search.
 

@@ -42,7 +42,9 @@ sources: [stable source reference]
 
 `as_of` is the newest effective date among the claims the page presents as
 current — not the date of the run. Aliases are only forms actually observed or
-confirmed by the user.
+confirmed by the user. They are grep targets: record the shorthand,
+abbreviations, misspellings, and former names this person actually uses, since
+lookup starts from their words rather than the page title.
 
 Substantive claims carry a stable source reference and its date, in whatever
 form the source uses (`slack://channel/ts`, a URL, a session id and turn, a file
