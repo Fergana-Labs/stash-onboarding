@@ -84,6 +84,8 @@ stated it as how things should be done. Consolidate aggressively — three
 near-identical procedures are one page with the variations named inside it — and
 replace the duplicated steps on term and event pages with a link.
 
+Include the context or conditions in which the procedure might be used.
+
 Never promote an agent's suggestion into a procedure. A proposal gets
 `status: proposed` and the name of whoever proposed it.
 

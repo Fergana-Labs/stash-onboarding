@@ -40,9 +40,8 @@ meaning of a word when a local meaning may exist.
 
 The wiki is a cache, not the world. Absence from it is not evidence of absence.
 
-- Ask the user if there is information missing or if you are uncertain.
-- Separate confirmed facts from proposals, drafts, and unverified mentions —
-  pages label these; carry the labels into the answer.
+- Ask the user if there is information missing or if you are uncertain. This is especially true if a term is used in a way that doesn't make sense in context and you can't find it in the wiki. Or if there's a procedure or task that you don't have enough context to do. 
+- Separate confirmed facts from proposals, drafts, and unverified mentions
 - Respect `as_of`. If a page is stale relative to the question, say so and go to
   the source in `data.md`.
 - When the missing piece is something the user knows — an owner, a location, a
