@@ -8,6 +8,27 @@ re-explain the same customers, systems, and conventions forever. These skills
 compile that context once, keep it current, and route a future agent to the
 smallest page that answers the question.
 
+## Start with one prompt
+
+Paste this into any coding agent that can run shell commands — Claude Code,
+Codex, or anything else. Nothing to install first.
+
+```text
+Set up my Stash memory. Clone https://github.com/Fergana-Labs/stash-onboarding.git
+into a temp directory, read skills/stash-onboard-memory/SKILL.md there along with
+every reference and asset it links, then follow it end to end — interview me,
+inventory my sources, and build the wiki. When you finish, offer to copy the
+skills into ~/.claude/skills and ~/.agents/skills so they load in future sessions.
+```
+
+Before you start, connect the integrations you want the wiki built from — Slack,
+Drive, Notion, GitHub — to that agent. The skill can only inventory sources the
+session can already reach, and discovering a gap mid-interview turns into a
+detour.
+
+Set aside real time: it interviews you, surveys every source, runs a full
+curation pass, and then answers one of your own questions from the result.
+
 ## The loop
 
 ```
@@ -42,7 +63,11 @@ The wiki is derived and disposable — raw sources stay authoritative, and every
 substantive claim cites the record it came from. Curation writes to a plain
 folder; where that folder ends up living is a separate concern.
 
-## Install
+## Install permanently
+
+The one-prompt path above is enough to build the wiki. Install the skills when
+you want them loaded in every session — including `stash-use-memory`, which is
+the one that earns its keep day to day.
 
 ### Claude Code
 
@@ -74,11 +99,10 @@ Each directory under `skills/` is a self-contained skill: a `SKILL.md` plus its
 `references/` and `assets/`. Point any agent that reads Markdown instructions at
 `SKILL.md` and it will work.
 
-## Start here
+## Once installed
 
-Run `stash-onboard-memory`. It walks the whole path — install, interview, source
-inventory, brief, first curation run, and a real question answered from the
-result — in one session.
+Run `stash-onboard-memory` if you haven't built a wiki yet — it walks the whole
+path in one session.
 
 If you already have a brief, run `stash-curate-memory` directly and give it the
 brief path and a folder to write into.
