@@ -1,0 +1,12 @@
+{
+  "name": "stash-memory",
+  "description": "Onboard a person onto Stash, compile their agent sessions and connected integrations into a personal memory wiki of terms, events, and procedures, and answer from it.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Fergana Labs",
+    "url": "https://github.com/Fergana-Labs"
+  },
+  "homepage": "https://github.com/Fergana-Labs/stash-onboarding",
+  "repository": "https://github.com/Fergana-Labs/stash-onboarding",
+  "license": "UNLICENSED"
+}

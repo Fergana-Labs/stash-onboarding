@@ -1,0 +1,18 @@
+{
+  "name": "fergana-labs",
+  "owner": {
+    "name": "Fergana Labs",
+    "url": "https://github.com/Fergana-Labs"
+  },
+  "description": "Skills from Fergana Labs",
+  "plugins": [
+    {
+      "name": "stash-memory",
+      "source": "./",
+      "description": "Onboard onto Stash, compile agent sessions and connected integrations into a personal memory wiki, and answer from it.",
+      "version": "0.1.0",
+      "category": "knowledge",
+      "tags": ["memory", "stash", "onboarding", "knowledge-base"]
+    }
+  ]
+}
