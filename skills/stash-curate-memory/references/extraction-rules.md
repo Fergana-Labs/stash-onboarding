@@ -22,10 +22,19 @@ tiers, and statuses.
 The test: the phrase points at a **specific** thing in this person's world, and
 knowing which thing changes how you act.
 
+**Every named entity gets its own page.** A customer, prospect, partner,
+competitor, product, project, or person named in more than one record gets a
+page under its own name, even when each individual mention is thin and even
+when the material would fit on a broader page. A thin page that exists beats a
+rich page nobody can route to: someone asking "what do we know about
+<entity>?" gets nothing back from a paragraph buried in a strategy page. Say
+plainly on the page how little is known.
+
 Skip generic vocabulary used generically, a phrasing seen once with nothing
-attached, a status that will be false next month (event), a list of steps
-(procedure), and a person mentioned once with no relationship established — keep
-that as a mention on a related page rather than minting one.
+attached, a status that will be false next month (event), and a list of steps
+(procedure). An entity that appears exactly once with nothing attached stays a
+dated mention on a related page — but count occurrences across every source
+before deciding, not just the one in front of you.
 
 Lead with one sentence on what it is, then current state, then whatever of key
 facts, where it lives, relationships, and open questions has content. A reader
@@ -41,6 +50,8 @@ Updating:
   page `uncertain`. Do not average them.
 - Facts live on one page; others link rather than copy. Check `terms.md` and
   aliases for the same thing under another name before creating.
+- Consolidation applies to concepts and procedures, never to named entities.
+  Two concepts saying the same thing should merge; two customers never should.
 
 For a set whose membership changes — customers, active projects, team members —
 where one source is authoritative, write down how to enumerate that source

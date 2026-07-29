@@ -20,11 +20,10 @@ keeping the old slug as an alias — never orphan a link.
 ## Progressive disclosure
 
 The three indexes plus `data.md` are all an agent should need to read before
-knowing which page to open. Keep them loadable at the start of any session:
-indexes under ~400 words, `data.md` under ~600, any page under ~600. An index
-row is a pointer, not a summary — if it starts explaining, the explanation
-belongs on the page. Group rows under headings when an index gets long; never
-drop a row, since that drops the route.
+knowing which page to open, so keep them cheap enough to load at the start of
+any session. An index row is a pointer, not a summary — if it starts
+explaining, the explanation belongs on the page. Group rows under headings when
+an index gets long; never drop a row, since that drops the route.
 
 ## Pages
 

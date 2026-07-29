@@ -70,18 +70,30 @@ current index lines — names and one-liners, not the pages. Each returns
 proposals covering all three kinds: terms, events, and procedures. Subagents
 never write to the memory root.
 
+Each subagent also returns every named entity it saw — customers, prospects,
+partners, competitors, products, projects, people — with its occurrence count,
+whether or not it proposed a page for it. A unit sees one container, so an
+entity that matters across the whole corpus can look incidental from inside any
+single one. Reporting it is how reduce finds out otherwise.
+
 Every proposal names its target page, the operation, the proposed text, source
-references with dates, and an impact score answering *how much does this change
-what we believe about the world?*
+references with dates, and what it changes about what we already believe:
+nothing, a new detail, a new thing, or a contradiction of something the wiki
+currently presents as true.
 
-- **0** — already represented
-- **1** — adds detail; nothing written becomes wrong
-- **2** — a new thing worth a page, or a material change to current state
-- **3** — contradicts or supersedes something the wiki presents as current
+That last field exists to keep the wiki from accreting. A proposal that only
+restates what a page already says is dropped, not appended. A proposal that
+contradicts the current state is applied before the rest, so later edits land
+on corrected text.
 
-**5. Reduce.** Drop the 0s. Bucket proposals by target page — the same thing
-arriving from three sources is one page, not three — merge each bucket into one
-intended final state, and apply the 3s first so later edits land on corrected
+**5. Reduce.** First, pool the entity reports from every unit and sum each
+entity's occurrences across all of them. Any entity appearing in more than one
+record gets its own page, however minor any single proposal made it look —
+bucketing by target page alone will never surface this, because each unit saw
+too little to ask for the page. Then drop the proposals that add nothing new
+and bucket the rest by target page — the same concept arriving from three
+sources is one page, not three — merge each bucket into one intended final
+state, and apply the contradictions first so later edits land on corrected
 state. One writer per file; fanning out the writes is fine as long as no two
 writers share a page. Conflicts resolve by the evidence hierarchy in the
 extraction rules; what does not resolve gets both claims, both dates, and
