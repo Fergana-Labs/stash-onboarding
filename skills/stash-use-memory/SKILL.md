@@ -57,26 +57,21 @@ about the wiki, not about X.
 
 ## 3. Progressive disclosure
 
-Search narrow, then widen, and stop as soon as the answer is sourced.
+Search narrow and then widen
 
 1. **Indexes first.** Grep or keyword-search `terms.md`, `events/events.md`, and
    `procedures/procedures.md` for the term and its plausible aliases. These
    files are small enough to read whole.
 2. **Open the page** the index points at. Read one related page if the first
    names it as governing or disambiguating.
-3. **Search the whole wiki** only when the indexes miss — grep across
+3. **Search the whole wiki** when the indexes miss — grep across
    `terms/`, `events/`, and `procedures/` for the phrase, since a term may live
    inside a page as an alias or a mention rather than as its own entry.
-4. **Go to raw sources** only for freshness, a conflict, an ambiguity, or a fact
+4. **Go to raw sources** for freshness, a conflict, an ambiguity, or a fact
    the wiki does not carry. Use `data.md` to find the right container and read
    that container — not every connected source.
 
-Default ceiling: two wiki pages and roughly eight raw records. Go past it when
-the user asks for exhaustive work, the stakes are explicit, or a
-source-authoritative collection needs full enumeration.
-
-Keep the mechanics out of the answer. Cite the page and, where it mattered, the
-raw source; do not narrate the search.
+Double check raw sources if there is any doubt. Keep the mechanics out of the answer. Cite the page and, where it mattered, the raw source; do not narrate the search.
 
 ## 4. Do not edit the wiki
 
