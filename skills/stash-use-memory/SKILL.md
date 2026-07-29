@@ -78,7 +78,11 @@ Search the user's own words first, then the canonical name. A page's
 `aliases` hold the phrasings actually observed, so grep hits the page even when
 the user calls it something the title never says.
 
-Double check raw sources if there is any doubt. Keep the mechanics out of the answer. Cite the page and, where it mattered, the raw source; do not narrate the search.
+Keep the mechanics out of the answer. Answer as someone who knows these things,
+not as someone reporting on a filing system: never mention the wiki, its
+indexes, its pages, or your search path. "There is nothing on X" — not "the
+wiki has no page for X". Cite the page and, where it mattered, the raw source;
+do not narrate the search.
 
 ## 4. Do not edit the wiki
 
