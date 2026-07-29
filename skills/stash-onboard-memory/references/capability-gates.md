@@ -10,7 +10,7 @@ Verified against `../moltchat` on 2026-07-29 (post #940/#941/#942).
 | Install hooks | Interactive `stash signin` detects agents and installs hooks | Respect printed restart and trust steps, especially Codex hook approval. |
 | Verify uploads | `stash status --json` | Require a real successful upload before calling capture healthy. |
 | Verify history import | `stash import-history --status` | Import runs in the background after signin; wait for it to finish before judging what landed. Safe to re-run — the server skips existing sessions. |
-| Repair setup | `stash setup` | Re-runs the wizard (recording, hooks, folder context) without touching auth. Use it instead of hand-editing config. |
+| Repair setup | `stash setup --record --agents <list> --connect --import-history` (and `--no-*` negatives) | Re-runs setup (recording, hooks, folder context) without touching auth. Use it instead of hand-editing config. Always pass flags — bare `stash setup` is the interactive wizard, which needs a TTY the agent doesn't have. Ask the user for any missing decision; never guess. |
 | Browse sources | `stash ls / --json`, `stash vfs` | Inventory what is actually visible, not what should be. |
 | Connect sources | `stash sources add`, `stash sources sync` | Use only supported, user-approved connectors. Never silently substitute one. |
 | Read integrations | MCP tools available to the session | The curator reads these live. There is no unified change feed — coverage comes from the wiki's own source map and run log. |
