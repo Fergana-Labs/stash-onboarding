@@ -35,12 +35,21 @@ Then run the checks yourself and show the user pass or fail for each:
 - `stash ls / --json` — readable scope
 - `stash status --json` — hook health
 - `stash import-history --status` — history import finished, error count
-- any trust or restart steps printed by `stash signin`, especially Codex hook
-  approval
+
+If `stash signin` printed trust or restart steps (Codex requires a restart
+and hook approval before it streams), do NOT do them now — hooks only record
+*future* sessions, and nothing in this flow depends on them. Tell the user
+it's saved for the very end, and carry it there.
 
 Stop and repair a failed prerequisite before continuing. The wizard is
 re-runnable: `stash setup` repeats setup (recording, agent hooks, folder
 context) without touching auth, so a wrong answer is never a dead end.
+
+**Resuming after an interruption:** every phase leaves an artifact — this
+cloned repo, the onboarding brief, the local memory root, the published
+wiki (`stash memory ls`). Check which exist and continue from the first
+missing one; never redo a finished phase. In Codex, `codex resume --last`
+returns to this session.
 
 ## 2. Interview for context
 
@@ -145,3 +154,14 @@ Close by explaining:
 - Personal memory is single-player. Shared organizational memory requires an
   enterprise workspace and its permission model.
 - They can ask for a refresh any time they add sources or make corrections.
+
+## 7. The one deferred step: trust the hooks
+
+Last, so it can't interrupt anything: if `stash signin` said an agent needs a
+restart to trust its hooks (Codex does), have the user do it now — restart
+the agent and approve the Stash hooks when prompted. From then on their
+sessions record automatically.
+
+This onboarding session is not lost to the restart: the agent's local
+transcript exists regardless of hooks, and a later `stash import-history`
+run sweeps it up — the server skips everything already uploaded.
