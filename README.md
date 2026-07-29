@@ -1,17 +1,16 @@
 # Stash memory skills
 
-Three skills that build a personal memory wiki out of what you already do — your
-agent sessions and your connected integrations — and then answer from it.
+These skills build a personal memory wiki out of existing data: your
+agent sessions and your connected integrations.
 
-The problem they solve: every new agent session starts from zero, so you
-re-explain the same customers, systems, and conventions forever. These skills
-compile that context once, keep it current, and route a future agent to the
-smallest page that answers the question.
+The problem we solve: every new agent session starts from zero, so you
+keep re-explaining context and conventions. These skills compile that 
+context, keep it current, and route agents to the right information.
 
 ## Start with one prompt
 
-Paste this into any coding agent that can run shell commands — Claude Code,
-Codex, or anything else. Nothing to install first.
+Paste this into any coding agent that can run shell commands such as Claude Code,
+or Codex.
 
 ```text
 Set up my Stash memory. Clone https://github.com/Fergana-Labs/stash-onboarding.git
@@ -21,21 +20,19 @@ inventory my sources, and build the wiki. When you finish, offer to copy the
 skills into ~/.claude/skills and ~/.agents/skills so they load in future sessions.
 ```
 
-Before you start, connect the integrations you want the wiki built from — Slack,
-Drive, Notion, GitHub — to that agent. The skill can only inventory sources the
-session can already reach, and discovering a gap mid-interview turns into a
-detour.
+Before you start, connect the integrations you want the wiki built from such as Slack,
+Drive, Notion, or GitHub, to that agent. The skill can only inventory sources the agent
+is already connected to. 
 
-Set aside real time: it interviews you, surveys every source, runs a full
-curation pass, and then answers one of your own questions from the result.
+The agent will interviews you, survey every source, and run a full
+curation pass.
 
 ## The loop
 
 ```
 onboard ──▶ onboarding brief ──▶ curate ──▶ memory wiki ──▶ use
                                     ▲                        │
-                                    └──── memory-inbox ◀─────┘
-                                          (your corrections)
+                                    └──── updated data ◀─────┘
 ```
 
 | Skill | What it does |
@@ -56,18 +53,16 @@ memory/
   procedures/         one page per repeatable method or policy
 ```
 
-Three kinds of page, three questions: **terms** answer *what is this thing?*,
-**events** answer *what happened?*, **procedures** answer *how do we do this?*
+There are three folders mapping to the types of memory in neuroscience: **terms (semantic)** answer *what is this thing?*,
+**events (episodic)** answer *what happened?*, **procedures (procedural)** answer *how do we do this?*
 
-The wiki is derived and disposable — raw sources stay authoritative, and every
-substantive claim cites the record it came from. Curation writes to a plain
-folder; where that folder ends up living is a separate concern.
+The wiki is derived so that raw sources stay authoritative, and claims cites the records they came from. It can best be 
+thought of as an index, reasoning cache, or contextual meta-data over your data sources. 
 
-## Install permanently
+## Install in your agent
 
 The one-prompt path above is enough to build the wiki. Install the skills when
-you want them loaded in every session — including `stash-use-memory`, which is
-the one that earns its keep day to day.
+you want them loaded in every session.
 
 ### Claude Code
 
@@ -101,11 +96,7 @@ Each directory under `skills/` is a self-contained skill: a `SKILL.md` plus its
 
 ## Once installed
 
-Run `stash-onboard-memory` if you haven't built a wiki yet — it walks the whole
-path in one session.
-
-If you already have a brief, run `stash-curate-memory` directly and give it the
-brief path and a folder to write into.
+Run `stash-onboard-memory` if you haven't built a wiki yet. This will walk you through installation and curation of your knowledge base.
 
 ## How it decides what is true
 
