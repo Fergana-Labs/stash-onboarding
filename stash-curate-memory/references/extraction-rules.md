@@ -68,7 +68,7 @@ A procedure is a repeatable method or policy: how marketing analysis gets done
 here, how a release is cut, how an escalation is handled, where a report's
 inputs come from.
 
-Promote one only when the same sequence shows up twice or more, or the user
+Promote one when it's a clear procedure that could be used again, or the user
 stated it as how things should be done. Consolidate aggressively — three
 near-identical procedures are one page with the variations named inside it — and
 replace the duplicated steps on term and event pages with a link.

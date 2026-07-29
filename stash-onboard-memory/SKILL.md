@@ -76,10 +76,16 @@ things:
 2. the integrations available and how to read each one
 3. the data sources, their coverage, and what is not reachable
 
-Then draft a small schema from what you found in the sources and what the user
-said — the handful of domains their world actually divides into. Show it,
-confirm it, and write it into the brief. Label anything unconfirmed as a
-hypothesis until the user accepts it.
+Then write a structured list of what you now believe to be true, pulled from
+the interview and your quick pass over the sources: the people, systems,
+projects, and terms that came up, what each appears to be, and where you saw
+it. Facts, not a taxonomy — the shape of their world can emerge from the full
+curation run.
+
+Show the list and ask the user directly: is this right, and what would you
+change or add? Take their corrections and additions at face value, then write
+the corrected list into the brief. Mark anything they did not confirm as
+unverified rather than dropping it.
 
 This brief is the curator's highest-authority input. Everything the user stated
 outranks what any source implies about them.

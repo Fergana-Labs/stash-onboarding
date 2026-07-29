@@ -16,6 +16,9 @@ Read [references/memory-layout.md](references/memory-layout.md) and
 - **The onboarding brief** — a Markdown file, path given by the caller, holding
   the user's ground truth, the integrations available, and the approved data
   sources. Highest authority on what the user believes and what you may read.
+  Its user-corrected list of people, systems, projects, and terms is your
+  starting set: seed pages from it and let the sources extend, date, and
+  organize them. Only newer evidence overrides a claim the user confirmed.
 - **Agent sessions stored locally** — the on-disk transcript stores of the
   coding agents the user runs: Claude Code, Codex, OpenClaw, Hermes, and
   whatever else the brief names. These hold what the user was actually working

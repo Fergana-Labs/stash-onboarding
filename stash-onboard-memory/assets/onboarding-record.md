@@ -37,14 +37,19 @@ vocabulary the wiki gets routed by.
 | Source the user named | Why not reachable | Next step |
 |---|---|---|
 
-## 4. Proposed schema
+## 4. What we believe to be true
 
-Confirmed with the user on:
+Drawn from the interview and a quick pass over the sources, then corrected by
+the user. Facts, not a taxonomy.
 
-| Domain | What belongs here | Example topic |
-|---|---|---|
+Reviewed with the user on:
 
-### Still hypotheses
+| Thing | What it appears to be | Where it showed up | Confirmed |
+|---|---|---|---|
+
+### The user changed or added
+
+### Unverified — they did not confirm either way
 
 ## 5. Boundaries
 
