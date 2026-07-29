@@ -24,7 +24,7 @@ Before you start, connect the integrations you want the wiki built from such as 
 Drive, Notion, or GitHub, to that agent. The skill can only inventory sources the agent
 is already connected to. 
 
-The agent will interviews you, survey every source, and run a full
+The agent will interview you, survey every source, and run a full
 curation pass.
 
 ## The loop
@@ -56,7 +56,7 @@ memory/
 There are three folders mapping to the types of memory in neuroscience: **terms (semantic)** answer *what is this thing?*,
 **events (episodic)** answer *what happened?*, **procedures (procedural)** answer *how do we do this?*
 
-The wiki is derived so that raw sources stay authoritative, and claims cites the records they came from. It can best be 
+The wiki is derived so that raw sources stay authoritative, and claims cite the records they came from. It can best be 
 thought of as an index, reasoning cache, or contextual meta-data over your data sources. 
 
 ## Install in your agent
