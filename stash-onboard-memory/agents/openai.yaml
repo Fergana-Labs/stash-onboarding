@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onboard Stash Memory"
+  short_description: "Set up a useful personal memory wiki"
+  default_prompt: "Use $stash-onboard-memory to guide me through personal Stash memory onboarding."

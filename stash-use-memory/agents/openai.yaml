@@ -1,0 +1,4 @@
+interface:
+  display_name: "Use Stash Memory"
+  short_description: "Route questions through curated memory"
+  default_prompt: "Use $stash-use-memory to answer this with my curated Stash memory."

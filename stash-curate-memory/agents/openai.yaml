@@ -1,0 +1,4 @@
+interface:
+  display_name: "Curate Stash Memory"
+  short_description: "Compile sources into a personal world model"
+  default_prompt: "Use $stash-curate-memory to build or update my personal Stash memory wiki."
